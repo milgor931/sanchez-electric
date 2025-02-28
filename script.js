@@ -12,16 +12,27 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     document.getElementById("contact-form").reset();
 });
 
-// Toggle the sidebar
-const menuToggle = document.getElementById("menu-toggle");
-const sidebar = document.getElementById("sidebar");
-const closeBtn = document.getElementById("close-btn");
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const menuToggle = document.getElementById("menu-toggle");
 
-menuToggle.addEventListener("click", function() {
-    sidebar.classList.add("open");
+    // Function to open sidebar
+    menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent click from being immediately registered on the document
+        sidebar.classList.add("open");
+    });
+
+    // Close sidebar when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+            sidebar.classList.remove("open");
+        }
+    });
+
+    // Prevent clicks inside the sidebar from closing it
+    sidebar.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
 });
 
-closeBtn.addEventListener("click", function() {
-    sidebar.classList.remove("open");
-});
 

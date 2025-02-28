@@ -106,8 +106,8 @@ header .menu-toggle {
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 /* Responsive Design */
