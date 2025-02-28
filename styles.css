@@ -32,6 +32,7 @@ header .logo a img {
 
 header .logo h1 {
     margin-left: 10px;
+    font-weight: 500;
 }
 
 header nav {
@@ -216,7 +217,8 @@ header .menu-toggle {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 50vh;
+    padding-top: 100px;
 }
 
 .hero-content .title {
@@ -224,7 +226,7 @@ header .menu-toggle {
 }
 
 #hero h2 {
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 #hero p {
@@ -301,15 +303,15 @@ form button:hover {
 
 /* Services Section Styling */
 #services {
+    background-color: #16193a;
+    width: 100%;
     text-align: center;
-    padding: 60px 100px;
-    background-color: #f8f9fa;
 }
 
 #services h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
 }
 
 .services-grid {
@@ -361,15 +363,13 @@ form button:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 1100px;
     margin: 0 auto;
-    gap: 40px;
 }
 
 .why-text {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    /* min-width: 300px; */
+    /* max-width: 500px; */
 }
 
 .why-text h2 {
